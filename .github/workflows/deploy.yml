@@ -1,5 +1,3 @@
-
-
 name: Deploy MultiDocker
 on:
   push:
@@ -34,8 +32,8 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
           application_name: MyApplication
-          environment_name: Myapplication-env
-          existing_bucket_name: psbucket1598
+          environment_name: MyApplication-env
+          existing_bucket_name: elasticbeanstalk-us-east-1-408398061622
           region: us-east-1
           version_label: ${{ github.sha }}
           deployment_package: deploy.zip
